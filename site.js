@@ -42,7 +42,56 @@ const vue_app = Vue.createApp({
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      }
+            getMonthText(dateArray) {
+                  const month = dateArray[1];
+                  const day = dateArray[2];
+                  const year = dateArray[0];
+                  
+                  let monthText = '';
+                  if (month === 1) {
+                        monthText = 'January';
+                  } else if (month === 2) {
+                        monthText = 'February';
+                  } else if (month === 3) {
+                        monthText = 'March';
+                  } else if (month === 4) {
+                        monthText = 'April';
+                  } else if (month === 5) {
+                        monthText = 'May';
+                  } else if (month === 6) {
+                        monthText = 'June';
+                  } else if (month === 7) {
+                        monthText = 'July';
+                  } else if (month === 8) {
+                        monthText = 'August';
+                  } else if (month === 9) {
+                        monthText = 'September';
+                  } else if (month === 10) {
+                        monthText = 'October';
+                  } else if (month === 11) {
+                        monthText = 'November';
+                  } else if (month === 12) {
+                        monthText = 'December';
+                  }
+                  
+                  return `${monthText} ${day}, ${year}`;
+            },
+            like(index) {
+                  this.movies[index].likes++;
+            },
+            dislike(index) {
+                  this.movies[index].dislikes++;
+            },
+            posterClick(index) {
+                  const postersLength = this.movies[index].posters.length;
+                  this.movies[index].posterindex = (this.movies[index].posterindex + 1) % postersLength;
+            },
+            timeText(minutes) {
+                  const hours = Math.trunc(minutes / 60);
+                  const mins = minutes % 60;
+                  return `${hours}h ${mins}m`;
+            }
+      }     
 })
 
 vue_app.mount("#vue_app")
