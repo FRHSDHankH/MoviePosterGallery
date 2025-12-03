@@ -37,14 +37,14 @@
 	        <div class="col-md-6" v-for="(movie, index) in movies" :key="index">
 	            <div class="thumbnail">
 
-					<img class="poster img-fluid" :src="movie.posters[movie.posterindex]" @click="posterClick(index)" />
+					<img class="poster img-fluid posters" :src="movie.posters[movie.posterindex]" @click="posterClick(index)" />
 					<div class="imageInfo">Poster {{ movie.posterindex + 1 }} of {{ movie.posters.length }}</div>
 
 					<p class="title">{{ movie.title }} ({{ movie.country }})</p>
 					<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
-					<p class="runtime">Runtime: {{ movie.runtime }}</p>
-					<p class="released">Released: {{ movie.released }} | Rated: {{ movie.rating }}</p>
-					<p class="websites">Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website">website</a></p>
+					<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
+					<p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
+					<p class="websites">Websites: <a :href="movie.imdb" target="_blank" rel="noopener"> IMDb</a> | <a :href="movie.website" target="_blank" rel="noopener">Website</a></p>
 
 		            <div class="social">
 		              <p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}</p>
@@ -58,9 +58,9 @@
 
 	    <div class="footer">
 	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning" :href="github">
+			<a id="github" class="btn btn-lg btn-warning" :href="github" target="_blank" rel="noopener">
 				<i class="bi bi-github me-2"></i>{{ owner }}
-	  		</a>
+			</a>
 	      </div>
 	    </div>
 	</div>

@@ -1,142 +1,182 @@
 [
-      {
-            "title": "Willy Wonka & the Chocolate Factory",
-            "iscore": 7.8,
-            "rating": "G",
-            "runtime": 100,
-            "released": [1971, 6, 30],
-            "country": "USA",
-            "posters": ["img/willywonka.jpg", "img/willywonka_2.jpg", "img/willywonka_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt0067992",
-            "website": "https://www.paramountpictures.com/movies/willy-wonka",
-            "likes": 654,
-            "dislikes": 45,
-            "posterindex": 0
-      },
-      {
-            "title": "The Avengers",
-            "iscore": 8.0,
-            "rating": "PG-13",
-            "runtime": 143,
-            "released": [2012, 5, 4],
-            "country": "USA",
-            "posters": ["img/avengers1.jpg", "img/avengers1_2.jpg", "img/avengers1_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt0848228",
-            "website": "https://www.marvel.com/movies/the-avengers",
-            "likes": 892,
-            "dislikes": 78,
-            "posterindex": 0
-      },
-      {
-            "title": "Avengers: Age of Ultron",
-            "iscore": 7.3,
-            "rating": "PG-13",
-            "runtime": 141,
-            "released": [2015, 5, 1],
-            "country": "USA",
-            "posters": ["img/avengers2.jpg", "img/avengers2_2.jpg", "img/avengers2_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt2395427",
-            "website": "https://www.marvel.com/movies/avengers-age-of-ultron",
-            "likes": 745,
-            "dislikes": 102,
-            "posterindex": 0
-      },
-      {
-            "title": "Avengers: Infinity War",
-            "iscore": 8.4,
-            "rating": "PG-13",
-            "runtime": 149,
-            "released": [2018, 4, 27],
-            "country": "USA",
-            "posters": ["img/avengers3.jpg", "img/avengers3_2.jpg", "img/avengers3_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt4154756",
-            "website": "https://www.marvel.com/movies/avengers-infinity-war",
-            "likes": 934,
-            "dislikes": 89,
-            "posterindex": 0
-      },
-      {
-            "title": "Avengers: Endgame",
-            "iscore": 8.4,
-            "rating": "PG-13",
-            "runtime": 181,
-            "released": [2019, 4, 26],
-            "country": "USA",
-            "posters": ["img/avengers4.jpg", "img/avengers4_2.jpg", "img/avengers4_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt4154796",
-            "website": "https://www.marvel.com/movies/avengers-endgame",
-            "likes": 1050,
-            "dislikes": 95,
-            "posterindex": 0
-      },
-      {
-            "title": "Spider-Man: Homecoming",
-            "iscore": 7.4,
-            "rating": "PG-13",
-            "runtime": 133,
-            "released": [2017, 7, 7],
-            "country": "USA",
-            "posters": ["img/spiderman1_th.jpg", "img/spiderman1_th_2.jpg", "img/spiderman1_th_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt2250912",
-            "website": "https://www.sony.com/movies/spider-man-homecoming",
-            "likes": 756,
-            "dislikes": 64,
-            "posterindex": 0
-      },
-      {
-            "title": "Spider-Man: Far From Home",
-            "iscore": 7.4,
-            "rating": "PG-13",
-            "runtime": 129,
-            "released": [2019, 7, 2],
-            "country": "USA",
-            "posters": ["img/spiderman2_th.jpg", "img/spiderman2_th_2.jpg", "img/spiderman2_th_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt6814692",
-            "website": "https://www.sony.com/movies/spider-man-far-from-home",
-            "likes": 812,
-            "dislikes": 71,
-            "posterindex": 0
-      },
-      {
-            "title": "Spider-Man: No Way Home",
-            "iscore": 8.2,
-            "rating": "PG-13",
-            "runtime": 161,
-            "released": [2021, 12, 17],
-            "country": "USA",
-            "posters": ["img/spiderman3_th.jpg", "img/spiderman3_th_2.jpg", "img/spiderman3_th_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt10872600",
-            "website": "https://www.sony.com/movies/spider-man-no-way-home",
-            "likes": 945,
-            "dislikes": 82,
-            "posterindex": 0
-      },
-      {
-            "title": "The Amazing Spider-Man",
-            "iscore": 6.9,
-            "rating": "PG-13",
-            "runtime": 138,
-            "released": [2012, 7, 3],
-            "country": "USA",
-            "posters": ["img/amazingspiderman1.jpg", "img/amazingspiderman1_2.jpg", "img/amazingspiderman1_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt0948470",
-            "website": "https://www.sony.com/movies/the-amazing-spider-man",
-            "likes": 634,
-            "dislikes": 98,
-            "posterindex": 0
-      },
-      {
-            "title": "The Amazing Spider-Man 2",
-            "iscore": 6.6,
-            "rating": "PG-13",
-            "runtime": 142,
-            "released": [2014, 5, 2],
-            "country": "USA",
-            "posters": ["img/amazingspiderman2.jpg", "img/amazingspiderman2_2.jpg", "img/amazingspiderman2_3.jpg"],
-            "imdb": "http://www.imdb.com/title/tt1872181",
-            "website": "https://www.sony.com/movies/the-amazing-spider-man-2",
-            "likes": 567,
-            "dislikes": 112,
-            "posterindex": 0
-      }
+  {
+    "title": "Willy Wonka & the Chocolate Factory",
+    "iscore": 7.8,
+    "rating": "G",
+    "runtime": 100,
+    "released": [1971, 6, 30],
+    "country": "USA",
+    "posters": [
+      "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/97adc57458bfea7522664a8a987a9d14_be0fe801-a47b-4848-90f5-cb59dda776b7_500x749.jpg?v=1762478407",
+      "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/23ee3fee04c45f9228b0ecabd2e167f4_feaacc94-10f1-4409-aab4-39ae9ed6f1a1_500x749.jpg?v=1762478401",
+      "https://cdn.shopify.com/s/files/1/0057/3728/3618/files/scan016_daa1994c-f1c7-4eff-96fb-3b95dde1a512_500x749.jpg?v=1762980089"
+    ],
+    "imdb": "http://www.imdb.com/title/tt0067992",
+    "website": "https://www.paramountpictures.com/movies/willy-wonka",
+    "likes": 654,
+    "dislikes": 45,
+    "posterindex": 0
+  },
+  {
+    "title": "The Avengers",
+    "iscore": 8.0,
+    "rating": "PG-13",
+    "runtime": 143,
+    "released": [2012, 5, 4],
+    "country": "USA",
+    "posters": [
+      "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/THE-AVENGERS-LEGAL_500x749.jpg?v=1762971420",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt0848228",
+    "website": "https://www.marvel.com/movies/the-avengers",
+    "likes": 892,
+    "dislikes": 78,
+    "posterindex": 0
+  },
+  {
+    "title": "Avengers: Age of Ultron",
+    "iscore": 7.3,
+    "rating": "PG-13",
+    "runtime": 141,
+    "released": [2015, 5, 1],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt2395427",
+    "website": "https://www.marvel.com/movies/avengers-age-of-ultron",
+    "likes": 745,
+    "dislikes": 102,
+    "posterindex": 0
+  },
+  {
+    "title": "Avengers: Infinity War",
+    "iscore": 8.4,
+    "rating": "PG-13",
+    "runtime": 149,
+    "released": [2018, 4, 27],
+    "country": "USA",
+    "posters": [
+      "https://i5.walmartimages.com/asr/65e23347-2ccc-4581-9700-581e0ea9c3a8.a808f8889bfa9e368659fbefc5e5dda4.jpeg",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt4154756",
+    "website": "https://www.marvel.com/movies/avengers-infinity-war",
+    "likes": 934,
+    "dislikes": 89,
+    "posterindex": 0
+  },
+  {
+    "title": "Avengers: Endgame",
+    "iscore": 8.4,
+    "rating": "PG-13",
+    "runtime": 181,
+    "released": [2019, 4, 26],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt4154796",
+    "website": "https://www.marvel.com/movies/avengers-endgame",
+    "likes": 1050,
+    "dislikes": 95,
+    "posterindex": 0
+  },
+  {
+    "title": "Spider-Man: Homecoming",
+    "iscore": 7.4,
+    "rating": "PG-13",
+    "runtime": 133,
+    "released": [2017, 7, 7],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt2250912",
+    "website": "https://www.sony.com/movies/spider-man-homecoming",
+    "likes": 756,
+    "dislikes": 64,
+    "posterindex": 0
+  },
+  {
+    "title": "Spider-Man: Far From Home",
+    "iscore": 7.4,
+    "rating": "PG-13",
+    "runtime": 129,
+    "released": [2019, 7, 2],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt6814692",
+    "website": "https://www.sony.com/movies/spider-man-far-from-home",
+    "likes": 812,
+    "dislikes": 71,
+    "posterindex": 0
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "iscore": 8.2,
+    "rating": "PG-13",
+    "runtime": 148,
+    "released": [2021, 12, 17],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt10872600",
+    "website": "https://www.sony.com/movies/spider-man-no-way-home",
+    "likes": 945,
+    "dislikes": 82,
+    "posterindex": 0
+  },
+  {
+    "title": "The Amazing Spider-Man",
+    "iscore": 6.9,
+    "rating": "PG-13",
+    "runtime": 136,
+    "released": [2012, 7, 3],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt0948470",
+    "website": "https://www.sony.com/movies/the-amazing-spider-man",
+    "likes": 634,
+    "dislikes": 98,
+    "posterindex": 0
+  },
+  {
+    "title": "The Amazing Spider-Man 2",
+    "iscore": 6.6,
+    "rating": "PG-13",
+    "runtime": 142,
+    "released": [2014, 5, 2],
+    "country": "USA",
+    "posters": [
+      "",
+      "",
+      ""
+    ],
+    "imdb": "http://www.imdb.com/title/tt1872181",
+    "website": "https://www.sony.com/movies/the-amazing-spider-man-2",
+    "likes": 567,
+    "dislikes": 112,
+    "posterindex": 0
+  }
 ]
