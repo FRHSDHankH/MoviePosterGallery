@@ -238,6 +238,90 @@ body {
 }
 
 .posters {
-    height: 749px;
-    width: 500px;
+    max-height: 420px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* View toggle styles */
+.view-toggle .btn {
+    color: #e8e8e8;
+    border-color: rgba(255,255,255,0.08);
+}
+.view-toggle .btn.active,
+.view-toggle .btn:active {
+    background: rgba(255,107,107,0.12);
+    color: #fff;
+    border-color: rgba(255,107,107,0.25);
+}
+
+/* Carousel styles */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0 40px;
+}
+.carousel-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 980px;
+}
+.carousel-nav {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.06);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.carousel-nav:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+.carousel-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 auto;
+    background: linear-gradient(135deg,#171717 0%, #242424 100%);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,107,107,0.08);
+}
+.carousel-poster-wrap { flex: 0 0 auto; }
+.carousel-info { flex: 1 1 auto; }
+.carousel-info .title { font-size: 1.4rem; margin-bottom: 8px; }
+.carousel-indicators { display:flex; gap:8px; align-items:center; }
+.carousel-indicators .indicator { width:10px; height:10px; border-radius:50%; background: rgba(255,255,255,0.12); cursor:pointer; }
+.carousel-indicators .indicator.active { background: #FF6B6B; box-shadow: 0 4px 10px rgba(255,107,107,0.25); }
+
+/* Ensure carousel posters are uniform size and centered */
+.carousel-poster-wrap .poster {
+    width: 360px;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 107, 107, 0.28);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+    .carousel-poster-wrap .poster {
+        width: 300px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-card { flex-direction: column; }
+    .carousel-poster-wrap .poster {
+        width: 260px;
+        height: 390px;
+    }
+    .carousel-content { padding: 12px; }
 }

@@ -2,10 +2,18 @@ const vue_app = Vue.createApp({
   // This automatically imports your movies.json file and puts it into
   //   the variable: movies
   created() {
+    console.log('site.js created() called');
     fetch("movies.json")
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) throw new Error('Network response was not ok: ' + response.status);
+        return response.json();
+      })
       .then((json) => {
         this.movies = json;
+        console.log('movies loaded', this.movies.length);
+      })
+      .catch((err) => {
+        console.error('Failed to load movies.json:', err);
       });
   },
   data() {
@@ -16,6 +24,10 @@ const vue_app = Vue.createApp({
       title: "IMDb + Hank's Top 10 Movies",
       owner: "Hank",
       github: "http://www.github.com/FRHSDHankH",
+      // view mode: 'grid' or 'carousel'
+      viewMode: 'grid',
+      // index used by carousel
+      carouselIndex: 0,
     };
   },
   methods: {
@@ -82,7 +94,21 @@ const vue_app = Vue.createApp({
       const mins = minutes % 60;
       return `${hours}h ${mins}m`;
     },
+    // carousel controls
+    nextMovie() {
+      if (!this.movies || this.movies.length === 0) return;
+      this.carouselIndex = (this.carouselIndex + 1) % this.movies.length;
+    },
+    prevMovie() {
+      if (!this.movies || this.movies.length === 0) return;
+      this.carouselIndex = (this.carouselIndex - 1 + this.movies.length) % this.movies.length;
+    },
+    selectMovie(i) {
+      if (!this.movies || i < 0 || i >= this.movies.length) return;
+      this.carouselIndex = i;
+    }
   },
 });
 
 vue_app.mount("#vue_app");
+console.log('vue_app mounted');
