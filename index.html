@@ -20,20 +20,27 @@
 </head>
 
   <body>
-	<div id="vue_app" class="container">
+ 	<div id="vue_app" :class="['container', theme]">
 
 		<div class="header">
 		  <div class="container d-flex align-items-center justify-content-between">
 		    <h1 id="app_title">{{ title }}</h1>
-		    <div class="view-toggle btn-group" role="group" aria-label="View toggle">
-		      <button type="button" class="btn btn-sm btn-outline-light" :class="{active: viewMode==='grid'}" @click="viewMode='grid'">Grid</button>
-		      <button type="button" class="btn btn-sm btn-outline-light" :class="{active: viewMode==='carousel'}" @click="viewMode='carousel'">Carousel</button>
-		    </div>
+			<div class="view-toggle btn-group" role="group" aria-label="View toggle">
+				<button type="button" class="btn btn-sm btn-outline-light" :class="{active: viewMode==='grid'}" @click="viewMode='grid'">Grid</button>
+				<button type="button" class="btn btn-sm btn-outline-light" :class="{active: viewMode==='carousel'}" @click="viewMode='carousel'">Carousel</button>
+			</div>
+			<div class="theme-toggle ms-3">
+				<button class="btn btn-sm btn-outline-light" @click="toggleTheme()" :title="theme === 'dark' ? 'Switch to light' : 'Switch to dark'">
+					<i :class="theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon'"></i>
+				</button>
+			</div>
 		  </div>
 
 		</div>
 
 		<div class="main">
+
+	  <div class="container"> <!-- center content inside main -->
 
 		  <!-- Grid view -->
 		  <div class="row" v-if="viewMode==='grid'">
@@ -66,11 +73,11 @@
 		        <div class="carousel-poster-wrap">
 		          <img class="poster img-fluid" :src="movies[carouselIndex].posters[movies[carouselIndex].posterindex]" @click="posterClick(carouselIndex)" />
 		          <div class="imageInfo">Poster {{ movies[carouselIndex].posterindex + 1 }} of {{ movies[carouselIndex].posters.length }}</div>
+		          <p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[carouselIndex].iscore }}</p>
 		        </div>
 
 		        <div class="carousel-info">
 		          <h2 class="title">{{ movies[carouselIndex].title }}</h2>
-		          <p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[carouselIndex].iscore }}</p>
 		          <p class="runtime">Runtime: {{ timeText(movies[carouselIndex].runtime) }}</p>
 		          <p class="released">Released: {{ getMonthText(movies[carouselIndex].released) }} | Rated: {{ movies[carouselIndex].rating }}</p>
 		          <p class="websites">Websites: <a :href="movies[carouselIndex].imdb" target="_blank" rel="noopener">IMDb</a> | <a :href="movies[carouselIndex].website" target="_blank" rel="noopener">Website</a></p>
@@ -89,6 +96,8 @@
 		      <span v-for="(m,i) in movies" :key="i" class="indicator" :class="{active: i === carouselIndex}" @click="selectMovie(i)"></span>
 		    </div>
 		  </div>
+
+		  </div> <!-- /.container -->
 
 		</div>
 

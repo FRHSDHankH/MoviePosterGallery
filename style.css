@@ -78,17 +78,17 @@ body {
 
 /* This stylizes your "Poster X of Y" text */
 .imageInfo {
-	color: #b0b0b0;
-	font-style: italic;
-	font-size: 0.85rem;
-	float: right;
-	padding-right: 5px;
-	background: rgba(0, 0, 0, 0.4);
-	padding: 5px 10px;
-	border-radius: 4px;
-	margin-top: -30px;
-	position: relative;
-	z-index: 10;
+    color: #b0b0b0;
+    font-style: italic;
+    font-size: 0.85rem;
+    float: right;
+    padding-right: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
 }
 
 /* This stylizes your Title and Rating Text */
@@ -243,6 +243,66 @@ body {
     max-width: 100%;
 }
 
+/* Minimal Light theme overrides scoped to the app root */
+#vue_app.light .header {
+    background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+    border-bottom-color: #d0d0d0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+#vue_app.light .header h1 {
+    color: #222;
+    text-shadow: none;
+}
+#vue_app.light .main {
+    background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+    color: #111;
+}
+#vue_app.light .thumbnail {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+#vue_app.light .thumbnail img { background: #fff; border-color: rgba(0,0,0,0.06); }
+#vue_app.light .title, #vue_app.light .released, #vue_app.light .websites { color: #222; }
+#vue_app.light .score { background: linear-gradient(135deg,#ffd54f,#ffca28); color:#111; box-shadow: none; }
+
+/* Make view/theme toggles visible in light theme */
+#vue_app.light .view-toggle .btn {
+    color: #222;
+    border-color: rgba(0,0,0,0.08);
+    background: transparent;
+}
+#vue_app.light .view-toggle .btn.active,
+#vue_app.light .view-toggle .btn:active {
+    background: rgba(0,0,0,0.06);
+    color: #111;
+    border-color: rgba(0,0,0,0.12);
+}
+#vue_app.light .theme-toggle .btn {
+    color: #222;
+    border-color: rgba(0,0,0,0.08);
+    background: transparent;
+}
+#vue_app.light .theme-toggle .btn i { color: #222; }
+
+/* Make carousel use light theme colors */
+#vue_app.light .carousel-nav {
+    color: #222;
+    border-color: rgba(0,0,0,0.08);
+    background: transparent;
+}
+#vue_app.light .carousel-content {
+    background: linear-gradient(180deg,#ffffff 0%, #f6f6f6 100%);
+    border-color: rgba(0,0,0,0.06);
+}
+#vue_app.light .carousel-info .title { color: #111; }
+#vue_app.light .carousel-indicators .indicator { background: rgba(0,0,0,0.12); }
+#vue_app.light .carousel-indicators .indicator.active { background: #FF6B6B; }
+
+/* Ensure footer contrast in light mode */
+#vue_app.light .footer { background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%); border-top-color: rgba(0,0,0,0.06); }
+
+
 /* View toggle styles */
 .view-toggle .btn {
     color: #e8e8e8;
@@ -307,6 +367,27 @@ body {
     border-radius: 8px;
     border: 2px solid rgba(255, 107, 107, 0.28);
     box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* Small overlay score on carousel poster */
+.carousel-poster-wrap {
+    position: relative;
+}
+.carousel-poster-wrap .score {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    font-size: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    z-index: 20;
+}
+
+@media (max-width: 992px) {
+    .carousel-poster-wrap .score { height: 56px; width: 56px; line-height:56px; }
 }
 
 /* Responsive adjustments for smaller screens */
